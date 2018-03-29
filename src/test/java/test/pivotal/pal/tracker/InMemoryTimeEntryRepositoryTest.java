@@ -1,8 +1,13 @@
 package test.pivotal.pal.tracker;
 
+<<<<<<< HEAD
 import tracker.InMemoryTimeEntryRepository;
 import tracker.TimeEntryRepository;
 import tracker.TimeEntry;
+=======
+import io.pivotal.pal.tracker.InMemoryTimeEntryRepository;
+import io.pivotal.pal.tracker.TimeEntry;
+>>>>>>> 042cff29d175f317b8c599c8e0931bbbd4d74bae
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -14,8 +19,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class InMemoryTimeEntryRepositoryTest {
     @Test
     public void create() throws Exception {
+<<<<<<< HEAD
         TimeEntryRepository repo = new InMemoryTimeEntryRepository();
         TimeEntry createdTimeEntry = repo.create(new TimeEntry(123L, 456L, LocalDate.parse("2017-01-08"), 8));
+=======
+        InMemoryTimeEntryRepository repo = new InMemoryTimeEntryRepository();
+        TimeEntry createdTimeEntry;
+        createdTimeEntry = repo.create(
+                new TimeEntry(123L, 456L, LocalDate.parse("2017-01-08"), 8));
+>>>>>>> 042cff29d175f317b8c599c8e0931bbbd4d74bae
 
         TimeEntry expected = new TimeEntry(1L, 123L, 456L, LocalDate.parse("2017-01-08"), 8);
         assertThat(createdTimeEntry).isEqualTo(expected);
@@ -26,7 +38,11 @@ public class InMemoryTimeEntryRepositoryTest {
 
     @Test
     public void find() throws Exception {
+<<<<<<< HEAD
          TimeEntryRepository repo = new InMemoryTimeEntryRepository();
+=======
+        InMemoryTimeEntryRepository repo = new InMemoryTimeEntryRepository();
+>>>>>>> 042cff29d175f317b8c599c8e0931bbbd4d74bae
         repo.create(new TimeEntry(123L, 456L, LocalDate.parse("2017-01-08"), 8));
 
         TimeEntry expected = new TimeEntry(1L, 123L, 456L, LocalDate.parse("2017-01-08"), 8);
@@ -36,7 +52,11 @@ public class InMemoryTimeEntryRepositoryTest {
 
     @Test
     public void list() throws Exception {
+<<<<<<< HEAD
         TimeEntryRepository repo = new InMemoryTimeEntryRepository();
+=======
+        InMemoryTimeEntryRepository repo = new InMemoryTimeEntryRepository();
+>>>>>>> 042cff29d175f317b8c599c8e0931bbbd4d74bae
         repo.create(new TimeEntry(123L, 456L, LocalDate.parse("2017-01-08"), 8));
         repo.create(new TimeEntry(789L, 654L, LocalDate.parse("2017-01-07"), 4));
 
@@ -49,7 +69,11 @@ public class InMemoryTimeEntryRepositoryTest {
 
     @Test
     public void update() throws Exception {
+<<<<<<< HEAD
         TimeEntryRepository repo = new InMemoryTimeEntryRepository();
+=======
+        InMemoryTimeEntryRepository repo = new InMemoryTimeEntryRepository();
+>>>>>>> 042cff29d175f317b8c599c8e0931bbbd4d74bae
         TimeEntry created = repo.create(new TimeEntry(123L, 456L, LocalDate.parse("2017-01-08"), 8));
 
         TimeEntry updatedEntry = repo.update(
@@ -63,7 +87,11 @@ public class InMemoryTimeEntryRepositoryTest {
 
     @Test
     public void delete() throws Exception {
+<<<<<<< HEAD
         TimeEntryRepository repo = new InMemoryTimeEntryRepository();
+=======
+        InMemoryTimeEntryRepository repo = new InMemoryTimeEntryRepository();
+>>>>>>> 042cff29d175f317b8c599c8e0931bbbd4d74bae
         TimeEntry created = repo.create(new TimeEntry(123L, 456L, LocalDate.parse("2017-01-08"), 8));
 
         repo.delete(created.getId());
