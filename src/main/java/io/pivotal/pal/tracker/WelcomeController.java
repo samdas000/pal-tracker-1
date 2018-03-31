@@ -18,4 +18,8 @@ public class WelcomeController {
     public String sayHello() {
         return message;
     }
+
+    public void doNothing(){
+        //
+    }
 }
